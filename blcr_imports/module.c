@@ -77,7 +77,7 @@ static int __init blcr_imports_init(void)
 		printk(KERN_ERR "Running kernel UTS_RELEASE (%s) does not match that used to build BLCR (" UTS_RELEASE ")\n", tmp->release);
 		return -EINVAL;
 	    }
-#ifdef UTS_VERSION /* Often NOT available in configured kernel headers */
+#if 0
 	    if (0 != strcmp(tmp->version, UTS_VERSION)) {
 		printk(KERN_ERR "Running kernel UTS_VERSION (%s) does not match that used to build BLCR (" UTS_VERSION ")\n", tmp->version);
 		return -EINVAL;
